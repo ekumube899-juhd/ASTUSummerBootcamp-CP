@@ -1,0 +1,7 @@
+class Solution:
+    def flipAndInvertImage(self, image: List[List[int]]) -> List[List[int]]:
+        for ram in image:
+            ram.reverse()
+            for i in range(len(ram)):
+                ram[i] = 1 - ram[i]
+        return image
