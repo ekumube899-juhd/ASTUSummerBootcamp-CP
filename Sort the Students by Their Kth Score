@@ -1,0 +1,6 @@
+class Solution:
+    def sortTheStudents(self, score: List[List[int]], k: int) -> List[List[int]]:
+        def get_score(student):
+            return student [k]
+        score. sort(key=get_score, reverse=True)
+        return score
