@@ -1,0 +1,13 @@
+class Solution:
+    def getDescentPeriods(self, prices: List[int]) -> int:
+        n = len(prices)
+        current_length = 1
+        ans = 1
+        for i in range(1, n):
+            if prices[i - 1] - prices[i] == 1:
+                current_length += 1
+            else:
+                current_length = 1
+            ans += current_length
+        return ans            
+        
