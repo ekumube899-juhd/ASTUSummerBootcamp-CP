@@ -5,15 +5,15 @@ for _ in range(t):
     a.sort()
     blue = a[0]
     red = 0
-    i = 1
-    j = n - 1
-    while i < j:
-        blue += a[i]
-        red += a[j]
+    left = 1
+    right = n - 1
+    while left < right:
+        blue += a[left]
+        red += a[right]
         if red > blue:
             print("YES")
             break
-        i += 1
-        j -= 1
+        left += 1
+        right -= 1
     else:
         print("NO")
