@@ -1,0 +1,13 @@
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    s = input()
+    solved = set()
+    ans = 0
+    for que in s:
+        if que not in solved:
+            ans += 2
+            solved.add(que)
+        else:
+            ans += 1
+    print(ans)
