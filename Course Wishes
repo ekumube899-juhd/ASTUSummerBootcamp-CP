@@ -1,0 +1,12 @@
+t = int(input())
+for _ in range(t):
+    n, k = map(int, input(). split())
+    capacity = list(map(int, input(). split()))
+    levels = list(map(int, input(). split()))
+    opera = []
+    for i in range(n):
+        while levels[i] <= k:
+            levels[i] += 1
+            opera.append(i + 1)
+    print(len(opera))
+    print(*opera)
