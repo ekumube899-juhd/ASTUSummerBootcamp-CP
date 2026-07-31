@@ -1,0 +1,15 @@
+t = int(input())
+for _ in range(t):
+    n, m = map(int, input(). split())
+    act = list(map(int, input(). split()))
+    seen = set()
+    ans = [-1] * n
+    removed = 0
+    for i in range(m):
+        a = act[i]
+        if a not in seen:
+            seen.add(a)
+            if removed < n:
+                ans[n - 1 - removed] = i + 1
+                removed += 1
+    print(*ans)            
