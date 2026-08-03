@@ -1,0 +1,12 @@
+n, q = map(int, input(). split())
+a = list(map(int, input(). split()))
+a.sort()
+pre = [0] * (n + 1)
+for i in range(n):
+    pre[i + 1] = pre[i] + a[i]
+for _ in range(q):
+    x, y = map(int, input(). split())
+    left = n - x
+    right = n - x + y
+    ans = pre[right] - pre[left]
+    print(ans)
